@@ -22,7 +22,7 @@ stages {
     stage('unit-test') {
 	    steps {
 		    echo 'unittest..'
-		    sh script: '/opt/maven/bin/mvn test'
+		    sh script: '/usr/share/maven/bin/mvn test'
 	    }
 	    post {
 		    success {
