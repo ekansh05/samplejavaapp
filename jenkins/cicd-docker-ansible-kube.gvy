@@ -40,7 +40,7 @@ stages {
 	   steps {
               withDockerRegistry(credentialsId: 'dockercred', url: 'https://index.docker.io/v1/') {
                     sh script: 'cd  $WORKSPACE'
-                    sh script: 'docker build --file Dockerfile --tag docker.io/lerndevops/samplejavaapp:$BUILD_NUMBER .'
+                    sh script: 'docker build --file Dockerfile --tag docker.io/ekansh22/samplejavaapp:$BUILD_NUMBER .'
                     sh script: 'docker push docker.io/lerndevops/samplejavaapp:$BUILD_NUMBER'
               }	
            }		
